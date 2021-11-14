@@ -1,6 +1,7 @@
 // import React from "react"; babel imports react automatically if it sees JSX 
 import {render} from "react-dom";
-import Pet from "./Pet";
+// import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
 // const App = () => {
 //   return React.createElement("div", {}, [
@@ -29,9 +30,10 @@ const App = () => {
   return (
     <div>
       <h1>Adopt me!</h1>
-      <Pet name="Luna" animal="Dog" breed="Havanese" />
+      {/* <Pet name="Luna" animal="Dog" breed="Havanese" />
       <Pet name="Lucy" animal="Cat" breed="Siamese" />
-      <Pet name="Mithu" animal="Bird" breed="Cockatiel" />
+      <Pet name="Mithu" animal="Bird" breed="Cockatiel" /> */}
+      <SearchParams />
     </div>
   );
 };
