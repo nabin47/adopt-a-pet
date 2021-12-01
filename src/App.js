@@ -1,8 +1,10 @@
 // import React from "react"; babel imports react automatically if it sees JSX
 import { StrictMode } from "react";
 import { render } from "react-dom";
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 // import Pet from "./Pet";
 import SearchParams from "./SearchParams";
+import Details from "./Details";
 
 // const App = () => {
 //   return React.createElement("div", {}, [
@@ -30,11 +32,24 @@ import SearchParams from "./SearchParams";
 const App = () => {
   return (
     <div>
-      <h1>Adopt me!</h1>
       {/* <Pet name="Luna" animal="Dog" breed="Havanese" />
       <Pet name="Lucy" animal="Cat" breed="Siamese" />
-      <Pet name="Mithu" animal="Bird" breed="Cockatiel" /> */}
-      <SearchParams />
+    <Pet name="Mithu" animal="Bird" breed="Cockatiel" /> */}
+      <Router>
+        <header>
+          <Link to="/">
+            <h1>Adopt me!</h1>
+          </Link>
+        </header>
+        <Switch>
+          <Route path="/details/:id">
+            <Details />
+          </Route>
+          <Route path="/">
+            <SearchParams />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };
