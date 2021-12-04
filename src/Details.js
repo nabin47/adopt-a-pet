@@ -16,6 +16,7 @@ class Details extends Component {
   }
 
   render() {
+    // throw new Error("hi");
     console.log(this.state);
 
     if (this.state.loading) {
